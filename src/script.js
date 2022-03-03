@@ -1,8 +1,8 @@
 import './style.css'
 import * as THREE from 'three'
-// import {
-//     OrbitControls
-// } from 'three/examples/jsm/controls/OrbitControls.js'
+import {
+    OrbitControls
+} from 'three/examples/jsm/controls/OrbitControls.js'
 import {ObjectControls} from 'threejs-object-controls/ObjectControls.js'
 import * as dat from 'lil-gui'
 import VertexShader from './shaders/vertex.glsl'
@@ -79,16 +79,16 @@ scene.add( camerahelper );
 
 // Controls
 
-// earthcontrols = new ObjectControls(camera, canvas, earth);
+earthcontrols = new ObjectControls(camera, canvas, earth);
 // earthcontrols.setDistance(8, 200); // sets the min - max distance able to zoom
 // earthcontrols.setZoomSpeed(1); // sets the zoom speed ( 0.1 == slow, 1 == fast)
 // earthcontrols.disableZoom();
 
-// const controls = new OrbitControls(camera, canvas)
+const controls = new OrbitControls(camera, canvas)
 // controls.enableDamping = true
 // controls.enableZoom = false
 // controls.enablePan = false
-// controls.enableRotate = false
+controls.enableRotate = false
 // controls.screenSpacePanning = false
 // controls.object = camera;
 // controls.target.set(0,-1.2,0);
